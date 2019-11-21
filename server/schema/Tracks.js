@@ -8,11 +8,27 @@ cube(`Tracks`, {
   measures: {
     count: {
       type: `count`,
-      drillMembers: [id, contextLibraryName, anonymousId, uuidTs, timestamp, originalTimestamp]
+      drillMembers: [id, anonymousId, contextLibraryName, contextName, originalTimestamp, timestamp, uuidTs]
     }
   },
   
   dimensions: {
+    id: {
+      sql: `id`,
+      type: `string`,
+      primaryKey: true
+    },
+    
+    event: {
+      sql: `event`,
+      type: `string`
+    },
+    
+    anonymousId: {
+      sql: `anonymous_id`,
+      type: `string`
+    },
+    
     contextLibraryVersion: {
       sql: `context_library_version`,
       type: `string`
@@ -23,39 +39,28 @@ cube(`Tracks`, {
       type: `string`
     },
     
-    event: {
-      sql: `event`,
-      type: `string`
-    },
-    
-    id: {
-      sql: `id`,
-      type: `string`,
-      primaryKey: true
-    },
-    
     contextLibraryName: {
       sql: `context_library_name`,
       type: `string`
     },
     
-    anonymousId: {
-      sql: `anonymous_id`,
+    contextEnvironment: {
+      sql: `context_environment`,
       type: `string`
     },
     
-    sentAt: {
-      sql: `sent_at`,
-      type: `time`
+    contextDescription: {
+      sql: `context_description`,
+      type: `string`
     },
     
-    uuidTs: {
-      sql: `uuid_ts`,
-      type: `time`
+    contextName: {
+      sql: `context_name`,
+      type: `string`
     },
     
-    timestamp: {
-      sql: `timestamp`,
+    receivedAt: {
+      sql: `received_at`,
       type: `time`
     },
     
@@ -64,8 +69,18 @@ cube(`Tracks`, {
       type: `time`
     },
     
-    receivedAt: {
-      sql: `received_at`,
+    sentAt: {
+      sql: `sent_at`,
+      type: `time`
+    },
+    
+    timestamp: {
+      sql: `timestamp`,
+      type: `time`
+    },
+    
+    uuidTs: {
+      sql: `uuid_ts`,
       type: `time`
     }
   }

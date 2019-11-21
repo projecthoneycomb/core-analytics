@@ -7,6 +7,7 @@ import { CubeProvider } from "@cubejs-client/react";
 import Header from "./components/Header/Header";
 
 const API_URL = "wss://hc-analytics.azurewebsites.net";
+// const API_URL = "ws://localhost:4000";
 const CUBEJS_TOKEN =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NzM1NjIzNjEsImV4cCI6MTU3MzY0ODc2MX0.982wP0EgHUw_szVNO2YWWWWQIbGNqoCXmLqppYG7cLQ";
   

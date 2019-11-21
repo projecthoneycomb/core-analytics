@@ -18,7 +18,13 @@ const DashboardItems = [
           }
         ],
         dimensions: ["Error.contextName"],
-        filters: []
+        filters: [
+          {
+            dimension: "Error.contextEnvironment",
+            operator: "equals",
+            values: ["production"]
+          }
+        ]
       },
       chartType: "line",
     },
@@ -30,6 +36,11 @@ const DashboardItems = [
     vizState: {
       query: {
         filters: [
+          {
+            dimension: "Tracks.contextEnvironment",
+            operator: "equals",
+            values: ["production"]
+          },
           {
             dimension: "Tracks.event",
             operator: "contains",
@@ -61,6 +72,11 @@ const DashboardItems = [
       query: {
         filters: [
           {
+            dimension: "Tracks.contextEnvironment",
+            operator: "equals",
+            values: ["production"]
+          },
+          {
             dimension: "Tracks.event",
             operator: "contains",
             values: ["notification_tap"]
@@ -85,6 +101,11 @@ const DashboardItems = [
     vizState: {
       query: {
         filters: [
+          {
+            dimension: "Tracks.contextEnvironment",
+            operator: "equals",
+            values: ["production"]
+          },
           {
             dimension: "Tracks.event",
             operator: "contains",
@@ -111,6 +132,11 @@ const DashboardItems = [
       query: {
         filters: [
           {
+            dimension: "Tracks.contextEnvironment",
+            operator: "equals",
+            values: ["production"]
+          },
+          {
             dimension: "Tracks.event",
             operator: "contains",
             values: ["Onboarding"]
@@ -136,6 +162,11 @@ const DashboardItems = [
       query: {
         filters: [
           {
+            dimension: "Tracks.contextEnvironment",
+            operator: "equals",
+            values: ["production"]
+          },
+          {
             dimension: "Tracks.event",
             operator: "contains",
             values: ["notification_permission"]
@@ -160,6 +191,11 @@ const DashboardItems = [
     vizState: {
       query: {
         filters: [
+          {
+            dimension: "Tracks.contextEnvironment",
+            operator: "equals",
+            values: ["production"]
+          },
           {
             dimension: "Tracks.event",
             operator: "contains",
